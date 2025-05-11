@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/Navbar";
-import { BackgroundBoxesDemo } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({
          <div className="relative w-full">
         <NavbarDemo />
         {children}</div>
-        <BackgroundBoxesDemo />
+        <Footer />
       </body>
     </html>
   );
