@@ -3,8 +3,28 @@ import SecondSection from "@/components/home/SecondSection";
 import { HeroParallaxDemo } from "@/components/home/ShowCase";
 import { AnimatedPinDemo } from "@/components/home/Services";
 import { TextRevealCardPreview } from "@/components/home/ServiesHeading";
-import { HeroHighlightDemo } from "@/components/home/BgGood";
+import { FeaturesSectionDemo } from "@/components/ui/HeroSecondSecttion";
 
+import { Poppins,Montserrat,Lato } from "next/font/google";
+import { ContainerTextFlipDemo } from "@/components/FlipWords";
+import { CardHoverEffectDemo } from "@/components/home/BoxLayout";
+import { AnimatedTestimonialsDemo } from "@/components/home/Testimonial";
+import OrbitalScroll from "@/components/home/someComponent";
+import LastSection from "@/components/home/LastSection";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight:'600'
+})
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight:'400'
+})
+const lato = Lato({
+  weight:'400',
+  subsets: ["latin"],
+})
 
 export default function Home() {
   const serviesData = [
@@ -19,7 +39,11 @@ export default function Home() {
    <div className=" ">
 
    <SecondSection />
-   <HeroParallaxDemo />
+   <div className="text-center">
+        <h4 className={`${lato.className} text-[#07437D] text-xl mt-10`}>Unleashing digital solutions that power brands, drive results, and fuel long-term success.</h4>
+        <ContainerTextFlipDemo/>
+    </div>
+    <CardHoverEffectDemo />
    <div className="bg-gray-100 my-20">
   {/* Centered heading */}
   <div className="w-full mb-10">
@@ -37,14 +61,15 @@ export default function Home() {
           description={items.description}
           image={items.image}
           hoverTitle={items.hoverTitle}
-        />
+          />
       </div>
     ))}
   </div>
 </div>
-
-
-   {/* <HeroHighlightDemo /> */}
+    <HeroParallaxDemo />
+    {/* <AnimatedTestimonialsDemo />
+    <OrbitalScroll /> */}
+   <LastSection />
    </div> 
    </>
   );

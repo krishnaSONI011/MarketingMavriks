@@ -105,12 +105,10 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+      From Problem  <br />to <span className="text-[#c20000]">Profit</span> 
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-justify">
+      At Marketing Mavericks, we don’t just provide services — we engineer solutions. From building conversion-driven websites to crafting digital campaigns that actually perform, our offerings are designed to make your brand stand out, scale up, and stay ahead.
       </p>
     </div>
   );
