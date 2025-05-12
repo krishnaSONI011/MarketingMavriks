@@ -58,7 +58,7 @@ export default function Home() {
   <div className="w-full mb-10">
     <div className="">
       {/* <TextRevealCardPreview /> */}
-      {/* <AppleCardsCarouselDemo /> */}
+      <AppleCardsCarouselDemo />
     </div>
   </div>
 
