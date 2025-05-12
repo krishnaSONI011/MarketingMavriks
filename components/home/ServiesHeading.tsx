@@ -22,7 +22,7 @@ const lato = Lato({
 })
 export function TextRevealCardPreview() {
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="">
         <h3 className={`${lato.className} antialiased text-2xl my-4 text-[#07437D]`}>Sometimes, you just need to see it.</h3>
       <TextRevealCard
         text="You know the business"

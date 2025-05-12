@@ -11,6 +11,10 @@ import { CardHoverEffectDemo } from "@/components/home/BoxLayout";
 import { AnimatedTestimonialsDemo } from "@/components/home/Testimonial";
 import OrbitalScroll from "@/components/home/someComponent";
 import LastSection from "@/components/home/LastSection";
+import MarqueeText from "@/components/ui/MarqueeText";
+import MarqueeImage from "@/components/ui/MarqueeImage";
+import { AppleCardsCarouselDemo } from "@/components/home/imagesSlider";
+import HeroSection from "@/components/home/herosec2";
 
 
 const poppins = Poppins({
@@ -33,6 +37,9 @@ export default function Home() {
     {title:"Digital Marketing",description:"SEO, PPC, social media ads, and performance marketing – we drive measurable results that grow your brand online.",image:"/s3.jpg",hoverTitle:"/Content-development"},
     {title:"Digital Marketing",description:"SEO, PPC, social media ads, and performance marketing – we drive measurable results that grow your brand online.",image:"/s3.jpg",hoverTitle:"/Content-development"}
   ]
+  const MarqueeHeading=[
+    "CREATIVE MARKETING AGENCY." ,"PERFORMENCE MARKETING." ,"UI/UX." ,"BRANDING."
+  ]
   return (
    <>
    <Video/>
@@ -44,16 +51,19 @@ export default function Home() {
         <ContainerTextFlipDemo/>
     </div>
     <CardHoverEffectDemo />
+    <MarqueeText text={MarqueeHeading} />
+    <MarqueeImage/>
    <div className="bg-gray-100 my-20">
   {/* Centered heading */}
   <div className="w-full mb-10">
-    <div className="mx-10">
-      <TextRevealCardPreview />
+    <div className="">
+      {/* <TextRevealCardPreview /> */}
+      <AppleCardsCarouselDemo />
     </div>
   </div>
 
   {/* 2 per row responsive layout */}
-  <div className="grid grid-cols-1 sm:grid-cols-2  ">
+  {/* <div className="grid grid-cols-1 sm:grid-cols-2  ">
     {serviesData.map((items, index) => (
       <div key={index}>
         <AnimatedPinDemo
@@ -64,8 +74,9 @@ export default function Home() {
           />
       </div>
     ))}
+  </div> */}
   </div>
-</div>
+  <HeroSection />
     <HeroParallaxDemo />
     {/* <AnimatedTestimonialsDemo />
     <OrbitalScroll /> */}
