@@ -11,7 +11,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { Navb } from "./NabMenu";
 import { Poppins } from "next/font/google";
 import { ButtonModal } from "./ButtonModel";
 

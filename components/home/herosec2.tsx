@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function CaseStudyBanner() {
   return (
-    <section className="w-full h-[500px] relative">
+    <section className="w-full h-[600px] relative">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
