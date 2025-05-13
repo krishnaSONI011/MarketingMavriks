@@ -23,9 +23,9 @@ export default function CaseStudyBanner() {
           </h2>
 
           <div className="mb-6">
-            <p className="text-2xl font-extrabold">FEARLESS</p>
+            <p className="text-2xl font-extrabold">KHATU DESIGN</p>
             <p className="text-sm uppercase tracking-widest mt-1">
-              Performance | Automation | UI/UX | Branding | Strategy
+               Branding | Strategy
             </p>
           </div>
 
