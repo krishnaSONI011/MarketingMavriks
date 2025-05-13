@@ -4,46 +4,47 @@ import { HoverEffect } from "../ui/card-hover-effect";
 
 export function CardHoverEffectDemo() {
   return (
-    <div className=" mx-auto px-8">
+    <div className="mx-auto px-8">
       <HoverEffect items={projects} />
     </div>
   );
 }
+
 export const projects = [
   {
-    title: "Stripe",
+    title: "High-Impact Branding",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Crafting unforgettable brand identities that resonate and convert.",
+    link: "#",
   },
   {
-    title: "Netflix",
+    title: "Next-Gen Web Design",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Building fast, modern, and visually stunning websites that drive results.",
+    link: "#",
   },
   {
-    title: "Google",
+    title: "SEO & Growth Strategy",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Dominating search engines and turning traffic into loyal customers.",
+    link: "#",
   },
   {
-    title: "Meta",
+    title: "Social Media Magic",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Creating viral content and engagement that builds lasting communities.",
+    link: "#",
   },
   {
-    title: "Amazon",
+    title: "E-commerce Excellence",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Scaling online stores with high-converting design and seamless UX.",
+    link: "#",
   },
   {
-    title: "Microsoft",
+    title: "Creative Copywriting",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Words that sell, stories that stick — we bring voice to your vision.",
+    link: "#",
   },
 ];

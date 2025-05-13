@@ -9,7 +9,7 @@ export function EvervaultCardDemo() {
       <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
 
-      <EvervaultCard text="Stop Scrolling, Start Growing" />
+      <EvervaultCard text="Stop Scrolling, Start Glowing" />
 
       <h2 className="dark:text-white text-black mt-4 text-base font-light">
       Discover the secret sauce of Mavricks.
