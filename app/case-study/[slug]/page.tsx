@@ -1,4 +1,5 @@
 import { BackgroundBeamsWithCollisionDemo } from "@/components/BeemComponet";
+import { CompareDemo } from "@/components/CampareComp";
 import BrandValueAndAbout from "@/components/case-study/BrandValueAndAbout";
 import FaceBookCampain from "@/components/case-study/FaceBookCanpain";
 import MetaResult from "@/components/case-study/MetaResult";
@@ -14,7 +15,7 @@ export default function caseStudy(){
         <WebsiteJuarnyRamp/>
         <FaceBookCampain />
         <MetaResult />
-        
+        <CompareDemo />
         
         </>
     )

@@ -3,13 +3,13 @@ import { Compare } from "@/components/ui/compare";
 
 export function CompareDemo() {
   return (
-    <div className="p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4">
+    <div className="mt-10 p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4">
       <Compare
-        firstImage="https://assets.aceternity.com/code-problem.png"
-        secondImage="https://assets.aceternity.com/code-solution.png"
+        firstImage="/kahtu_design/compare1.jpeg"
+        secondImage="/kahtu_design/compare2.jpeg"
         firstImageClassName="object-cover object-left-top"
         secondImageClassname="object-cover object-left-top"
-        className="h-[250px] w-[200px] md:h-[500px] md:w-[500px]"
+        className="w-full"
         slideMode="hover"
       />
     </div>
