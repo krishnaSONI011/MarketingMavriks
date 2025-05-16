@@ -10,7 +10,7 @@ export default function caseStudy(){
     return(
 
         <>
-        <BackgroundBeamsWithCollisionDemo />
+        <BackgroundBeamsWithCollisionDemo title={"Journey Revamp"} subTitle="Khatu Design"/>
         <BrandValueAndAbout />
         <WebsiteJuarnyRamp/>
         <FaceBookCampain />

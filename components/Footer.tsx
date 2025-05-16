@@ -4,6 +4,7 @@ import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,26 +34,26 @@ export function Footer() {
 
       {/* Social Icons */}
       <div className="flex gap-6 mt-6 relative z-20 text-white text-2xl">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="hover:text-blue-500 transition duration-200" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="hover:text-pink-400 transition duration-200" />
-        </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <FaFacebook className="hover:text-blue-600 transition duration-200" />
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="hover:text-blue-400 transition duration-200" />
-        </a>
+        </Link>
       </div>
 
       {/* Footer Links */}
       <div className="mt-8 text-neutral-400 text-sm relative z-20 flex flex-wrap gap-6 justify-center">
-        <a href="#about" className="hover:text-white transition duration-200">About</a>
-        <a href="#services" className="hover:text-white transition duration-200">Services</a>
-        <a href="#work" className="hover:text-white transition duration-200">Work</a>
-        <a href="#contact" className="hover:text-white transition duration-200">Contact</a>
+        <Link href="/about-us" className="hover:text-white transition duration-200">About</Link>
+        <Link href="#services" className="hover:text-white transition duration-200">Services</Link>
+        <Link href="#work" className="hover:text-white transition duration-200">Work</Link>
+        <Link href="#contact" className="hover:text-white transition duration-200">Contact</Link>
       </div>
 
       {/* Bottom Text */}
