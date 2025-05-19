@@ -18,8 +18,8 @@ export default function Video() {
     <div className="relative w-full h-[90vh]">
       <video
         ref={videoRef}
-        src="/video.mp4"
-        loop
+        src="https://marketingmavricks.com/wp-content/uploads/2025/05/MM-Showreel_4.1.mp4"
+        
         muted
         autoPlay
         className="w-full h-full object-cover"
