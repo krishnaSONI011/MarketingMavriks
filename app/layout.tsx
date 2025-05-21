@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavbarDemo } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import IdleAnimation from "@/components/IdleAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
          <div className="relative w-full">
         <NavbarDemo />
+        {/* <IdleAnimation /> */}
         {children}</div>
         <Footer />
       </body>

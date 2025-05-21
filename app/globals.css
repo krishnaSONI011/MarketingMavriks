@@ -120,3 +120,69 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes growTree {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+@keyframes seedGrow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes branchGrow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 64px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-grow {
+  animation: growTree 2s ease-in-out forwards;
+}
+
+.animate-seed-grow {
+  animation: seedGrow 1s ease-in-out forwards;
+}
+
+.animate-branch-grow {
+  animation: branchGrow 1s ease-in-out 2s forwards;
+}
+
+.animate-text-appear {
+  animation: fadeIn 1s ease-in-out 3s forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
