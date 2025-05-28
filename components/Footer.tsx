@@ -54,6 +54,7 @@ export function Footer() {
         <Link href="/services" className="hover:text-white transition duration-200">Services</Link>
         <Link href="#work" className="hover:text-white transition duration-200">Work</Link>
         <Link href="#contact" className="hover:text-white transition duration-200">Contact</Link>
+        <Link href="/blogs" className="hover:text-white transition duration-200">Blogs</Link>
       </div>
 
       {/* Bottom Text */}

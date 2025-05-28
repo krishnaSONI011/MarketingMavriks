@@ -31,15 +31,13 @@ const VerticalAccordion = () => {
     {/* servies section */}
     <div className="flex justify-around mt-10">
 
-      <div className="flex justify-center items-center">
-        <h1 className={`${poppins.className} text-4xl font-bold uppercase`}>
+      <div className="flex justify-center items-center w-1/3">
+        <h1 className={`${poppins.className} text-2xl font-bold uppercase`}>
         Services <span className="text-[#06437d]">That </span> Drive <span className="text-[#c20000]">Success</span>
       </h1> 
       </div>
-      <div className="w-1/2">
-        {/* <p className={`${lato.className} text-lg text-justify`}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio vitae neque beatae fugit accusamus nesciunt incidunt porro ratione odio, sunt amet totam fuga architecto doloremque harum explicabo at magni aut.
-        </p> */}
+      <div className="w-2/3">
+        
          <section className="p-4 ">
       <div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden">
         {items.map((item) => {
