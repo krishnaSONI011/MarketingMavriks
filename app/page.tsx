@@ -15,6 +15,7 @@ import MarqueeText from "@/components/ui/MarqueeText";
 import MarqueeImage from "@/components/ui/MarqueeImage";
 import { AppleCardsCarouselDemo } from "@/components/home/imagesSlider";
 import HeroSection from "@/components/home/herosec2";
+import AnimatedText from "@/components/home/animatedText";
 
 
 const poppins = Poppins({
@@ -31,12 +32,7 @@ const lato = Lato({
 })
 
 export default function Home() {
-  const serviesData = [
-    {title:"Content Development" , description:"We create compelling content that engages and converts, including blog writing, website copy, video scripts, and SEO-driven articles.",image:"/s1.jpg" ,hoverTitle:"/Content-development"},
-    {title:"E-Commerce Solutions",description:"We build stunning, high-converting shopify e-commerce websites with seamless user experiences, designed to boost sales and customer loyalty.",image:"/s2.jpg",hoverTitle:"/Content-development"},
-    {title:"Digital Marketing",description:"SEO, PPC, social media ads, and performance marketing – we drive measurable results that grow your brand online.",image:"/s3.jpg",hoverTitle:"/Content-development"},
-    {title:"Digital Marketing",description:"SEO, PPC, social media ads, and performance marketing – we drive measurable results that grow your brand online.",image:"/s3.jpg",hoverTitle:"/Content-development"}
-  ]
+  
   const MarqueeHeading=[
     "CREATIVE MARKETING AGENCY." ,"PERFORMENCE MARKETING." ,"UI/UX." ,"BRANDING."
   ]
@@ -44,7 +40,7 @@ export default function Home() {
    <>
    <Video/>
    <div className=" ">
-
+    
    <SecondSection />
    <div className="text-center">
         <h4 className={`${lato.className} text-[#07437D] text-xl mt-10`}>Unleashing digital solutions that power brands, drive results, and fuel long-term success.</h4>
@@ -62,19 +58,8 @@ export default function Home() {
     </div>
   </div>
 
-  {/* 2 per row responsive layout */}
-  {/* <div className="grid grid-cols-1 sm:grid-cols-2  ">
-    {serviesData.map((items, index) => (
-      <div key={index}>
-        <AnimatedPinDemo
-          title={items.title}
-          description={items.description}
-          image={items.image}
-          hoverTitle={items.hoverTitle}
-          />
-      </div>
-    ))}
-  </div> */}
+
+  
   </div>
   <HeroSection />
     <HeroParallaxDemo />

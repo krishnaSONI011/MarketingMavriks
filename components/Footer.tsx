@@ -51,7 +51,7 @@ export function Footer() {
       {/* Footer Links */}
       <div className="mt-8 text-neutral-400 text-sm relative z-20 flex flex-wrap gap-6 justify-center">
         <Link href="/about-us" className="hover:text-white transition duration-200">About</Link>
-        <Link href="#services" className="hover:text-white transition duration-200">Services</Link>
+        <Link href="/services" className="hover:text-white transition duration-200">Services</Link>
         <Link href="#work" className="hover:text-white transition duration-200">Work</Link>
         <Link href="#contact" className="hover:text-white transition duration-200">Contact</Link>
       </div>
