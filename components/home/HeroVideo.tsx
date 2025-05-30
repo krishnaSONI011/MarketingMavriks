@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 export default function Video() {
-  const [isMuted, setIsMuted] = useState(false); // Start unmuted
+  const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const toggleMute = () => {
@@ -12,35 +12,49 @@ export default function Video() {
       const newMute = !videoRef.current.muted;
       videoRef.current.muted = newMute;
       setIsMuted(newMute);
+      localStorage.setItem('video-muted', JSON.stringify(newMute));
+      videoRef.current.play().catch((e) => console.warn('Toggle play error:', e));
     }
   };
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
+  
+    // Load saved mute preference
+    const savedMute = localStorage.getItem('video-muted');
+    const initialMuted = savedMute ? JSON.parse(savedMute) : true;
+  
+    video.muted = initialMuted;
+    setIsMuted(initialMuted);
+  
+    // Play video initially after short delay for autoplay compliance
+    const timeout = setTimeout(() => {
+      video.play().catch((e) => console.warn('Initial play error:', e));
+    }, 1000);
+  
+    // Intersection Observer to auto pause/play on visibility (mute state unchanged)
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!video) return;
-        if (!entry.isIntersecting) {
-          video.muted = true;
-          setIsMuted(true);
+        if (!videoRef.current) return;
+  
+        if (entry.isIntersecting) {
+          videoRef.current.play().catch((e) => console.warn('Observer play error:', e));
         } else {
-          video.muted = false;
-          setIsMuted(false);
+          videoRef.current.pause();
         }
       },
-      {
-        threshold: 0.6, // At least 60% of the video must be visible
-      }
+      { threshold: 0.6 }
     );
-
+  
     observer.observe(video);
-
+  
     return () => {
-      if (video) observer.unobserve(video);
+      clearTimeout(timeout);
+      observer.disconnect();
     };
   }, []);
+  
 
   return (
     <div className="relative w-full h-[90vh]">
@@ -48,11 +62,14 @@ export default function Video() {
         ref={videoRef}
         src="https://marketingmavricks.com/wp-content/uploads/2025/05/MM-Showreel_4.1.mp4"
         autoPlay
+        loop
         playsInline
+        muted // Still needed for autoplay start
         className="w-full h-full object-cover"
-      ></video>
+      />
 
       <button
+        aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         onClick={toggleMute}
         className="absolute bottom-4 right-4 bg-slate-800/80 p-2 rounded-full shadow-md hover:bg-slate-500 transition"
       >
