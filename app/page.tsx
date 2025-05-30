@@ -10,7 +10,7 @@ import { Skeleton } from '@/components/Skeleton';
 
 
 const Video = dynamic(
-  () => import('@/components/home/HeroVideo'),{ssr:false , loading:()=> <> <Skeleton className='w-full h-[90vh]' /></>}
+  () => import('@/components/home/HeroVideo'),{ loading:()=> <> <Skeleton className='w-full h-[90vh]' /></>}
 );
 const AppleCardsCarouselDemo = dynamic(() =>
   import('@/components/home/imagesSlider').then(mod => mod.AppleCardsCarouselDemo),{ssr:false});
