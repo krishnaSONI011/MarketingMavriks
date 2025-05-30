@@ -5,9 +5,13 @@ import SecondSection from "@/components/home/SecondSection";
 import LastSection from "@/components/home/LastSection";
 import { ContainerTextFlipDemo } from '@/components/FlipWords';
 import { CardHoverEffectDemo } from '@/components/home/BoxLayout';
+import { Skeleton } from '@/components/Skeleton';
 
-// ✅ Dynamic imports
-const Video = dynamic(() => import('@/components/home/HeroVideo'),{ssr:false});
+
+
+const Video = dynamic(
+  () => import('@/components/home/HeroVideo'),{ssr:false , loading:()=> <> <Skeleton className='w-full h-[90vh]' /></>}
+);
 const AppleCardsCarouselDemo = dynamic(() =>
   import('@/components/home/imagesSlider').then(mod => mod.AppleCardsCarouselDemo),{ssr:false});
 const MarqueeImage = dynamic(() => import('@/components/ui/MarqueeImage'),{ssr:false});
