@@ -1,12 +1,8 @@
 "use client";
 import React from "react";
-import {
-  TextRevealCard,
-  TextRevealCardDescription,
-  TextRevealCardTitle,
-} from "../ui/text-reveal-card";
+
 import { Poppins,Montserrat,Lato } from "next/font/google";
-import RevealText from "./animatedText";
+
 
 
 const poppins = Poppins({
@@ -24,15 +20,17 @@ const lato = Lato({
 export function TextRevealCardPreview() {
   return (
     <div className="flex flex-col">
-      <RevealText color="#07437D">
-        <h3 className={`${lato.className} antialiased text-2xl my-4 text-[#07437D]`}>Sometimes, you just need to see it.</h3></RevealText>
-        <RevealText color="#c20000">
-      <TextRevealCard
+      
+        <h3 className={`${lato.className} antialiased text-center text-lg md:text-xl my-4 text-[#07437D]`}>We combine creativity, technology, and strategy to deliver measurable outcomes.</h3>
+        <h2 className={`text-center text-xl md:text-3xl ${poppins.className}`}>
+        Solutions That <span className="text-[#c20000]">Drive</span>  Growth
+        </h2>
+      {/* <TextRevealCard
         text="You know the business"
         revealText="I know the chemistry "
       >
         
-      </TextRevealCard></RevealText>
+      </TextRevealCard> */}
     </div>
   );
 }

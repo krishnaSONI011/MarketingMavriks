@@ -41,8 +41,8 @@ export default function Home() {
   <SecondSection />
 
   <div className="text-center">
-    <h4 className={`${lato.className} text-[#07437D] text-xl mt-10`}>
-      Unleashing digital solutions that power brands, drive results, and fuel long-term success.
+    <h4 className={`${lato.className} text-[#07437D] text-sm md:text-xl mt-10`}>
+    Powering Brands with Digital Solutions for Lasting Success
     </h4>
     <ContainerTextFlipDemo />
   </div>
@@ -53,7 +53,7 @@ export default function Home() {
 
   <div className="bg-gray-100 my-20">
     <div className="w-full mb-10">
-      <div>
+      <div>   
         <AppleCardsCarouselDemo />
       </div>
     </div>

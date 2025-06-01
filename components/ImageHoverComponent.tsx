@@ -1,17 +1,20 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Poppins, Montserrat } from 'next/font/google';
-import { link } from 'fs';
+import { Poppins, Montserrat, Lato } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
-  weight: ['400', '500'],
+  weight: ['400', '700'],
 });
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '600'],
+});
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400'],
 });
 
 const cards = [
@@ -23,9 +26,9 @@ const cards = [
   },
   {
     title: 'Khatu Design',
-    image:'/4.png',
-    content:'Website | UI/UX',
-    link:'#'
+    image: '/4.png',
+    content: 'Website | UI/UX',
+    link: '#',
   },
   {
     title: 'Room To Moon',
@@ -44,37 +47,56 @@ const cards = [
 export default function HoverCards() {
   return (
     <div>
-
-    
-    <div className="w-full h-[400px] bg-white overflow-hidden">
-      <div className="flex flex-row w-full h-full group">
-        {cards.map((card, i) => (
-          <div
-            key={i}
-            className="relative h-full flex-1 overflow-hidden cursor-pointer transition-all duration-500 ease-in-out group-hover:flex-[0.8] hover:flex-[3]"
-          >
-            <Image
-              src={card.image}
-              alt={card.title}
-              fill
-              className="object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
-              <h2 className={`text-3xl font-bold mb-2 ${poppins.className}`}>{card.title}</h2>
-              <p className={`text-base font-semibold mb-4 ${montserrat.className}`}>
-                {card.content}
-              </p>
-              <Link
-                href={card.link}
-                className="mt-2 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                View Case Study
-              </Link>
-            </div>
-          </div>
-        ))}
+      <div>
+        <h3
+          className={`${lato.className} antialiased text-center text-lg md:text-xl my-4 text-[#07437D]`}
+        >
+          Real Results. Real Impact.
+        </h3>
+        <h2
+          className={`text-center text-xl md:text-3xl ${poppins.className} font-bold`}
+        >
+          Case <span className="text-[#c20000]">Studies</span>
+        </h2>
       </div>
-    </div>
+
+      <div className="mt-5 w-full bg-white overflow-hidden">
+        <div className="flex flex-col lg:flex-row w-full group">
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className="relative w-full h-[300px] lg:h-[400px] flex-shrink-0 lg:flex-1 overflow-hidden cursor-pointer transition-all duration-500 ease-in-out group-hover:lg:flex-[0.8] hover:lg:flex-[3]"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2
+                  className={`text-2xl lg:text-3xl font-bold mb-2 ${poppins.className}`}
+                >
+                  {card.title}
+                </h2>
+                <p
+                  className={`text-sm lg:text-base font-semibold mb-4 ${montserrat.className}`}
+                >
+                  {card.content}
+                </p>
+                <Link
+                  href={card.link}
+                  className="mt-2 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-all duration-300"
+                >
+                  View Case Study
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
