@@ -57,7 +57,7 @@ export default function Video() {
   
 
   return (
-    <div className="relative w-full h-[90vh]">
+    <div className="relative w-full ">
       <video
         ref={videoRef}
         src="https://marketingmavricks.com/wp-content/uploads/2025/05/MM-Showreel_4.1.mp4"

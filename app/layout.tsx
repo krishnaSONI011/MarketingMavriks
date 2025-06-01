@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavbarDemo } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import IdleAnimation from "@/components/IdleAnimation";
+import Navbar from "@/components/AnotherNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth `}
       >
          <div className="relative w-full">
+          <div className="hidden md:block">
+
         <NavbarDemo />
+          </div>
+          <div className="md:hidden">
+
+        <Navbar />
+          </div>
         {/* <IdleAnimation /> */}
         {children}</div>
         <Footer />

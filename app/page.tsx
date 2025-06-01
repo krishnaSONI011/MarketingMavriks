@@ -6,6 +6,7 @@ import LastSection from "@/components/home/LastSection";
 import { ContainerTextFlipDemo } from '@/components/FlipWords';
 import { CardHoverEffectDemo } from '@/components/home/BoxLayout';
 import { Skeleton } from '@/components/Skeleton';
+import HoverCards from '@/components/ImageHoverComponent';
 
 
 
@@ -33,33 +34,39 @@ export default function Home() {
 
   return (
     <>
-      <Video />
+    <div className=''>
+    <Video />
 
+<div>
+  <SecondSection />
+
+  <div className="text-center">
+    <h4 className={`${lato.className} text-[#07437D] text-xl mt-10`}>
+      Unleashing digital solutions that power brands, drive results, and fuel long-term success.
+    </h4>
+    <ContainerTextFlipDemo />
+  </div>
+
+  <CardHoverEffectDemo />
+  <MarqueeText text={MarqueeHeading} />
+  <MarqueeImage />
+
+  <div className="bg-gray-100 my-20">
+    <div className="w-full mb-10">
       <div>
-        <SecondSection />
-
-        <div className="text-center">
-          <h4 className={`${lato.className} text-[#07437D] text-xl mt-10`}>
-            Unleashing digital solutions that power brands, drive results, and fuel long-term success.
-          </h4>
-          <ContainerTextFlipDemo />
-        </div>
-
-        <CardHoverEffectDemo />
-        <MarqueeText text={MarqueeHeading} />
-        <MarqueeImage />
-
-        <div className="bg-gray-100 my-20">
-          <div className="w-full mb-10">
-            <div>
-              <AppleCardsCarouselDemo />
-            </div>
-          </div>
-        </div>
-
-        <HeroSection />
-        <LastSection />
+        <AppleCardsCarouselDemo />
       </div>
+    </div>
+  </div>
+  <div className='mx-5 '>
+
+<HoverCards />
+  </div>
+  {/* <HeroSection /> */}
+  <LastSection />
+</div>
+    </div>
+      
     </>
   );
 }
