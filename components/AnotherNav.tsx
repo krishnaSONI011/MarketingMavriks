@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  { name: 'About', href: '/about-us' },
   { name: 'Services', href: '/services' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -19,13 +19,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`${poppins.className} antialiased top-0 w-full bg-white/80 backdrop-blur shadow-lg z-50 py-2`}>
+    <nav className={`${poppins.className} antialiased top-0 w-full bg-white/80 backdrop-blur shadow-lg z-50 py-2 `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative">
         
         {/* Left: Logo */}
         <div className="absolute left-4 md:static">
           <Link href="/" className="text-2xl font-bold text-blue-600 tracking-tight">
-            <Image src={'/logo.png'} alt='logo_website' height={100} width={90} />
+            <Image src={'/logo.png'} alt='logo_website' height={100} width={70} />
           </Link>
         </div>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
 
         {/* Right: Button + Toggle */}
         <div className="absolute right-4 md:static flex items-center space-x-4">
-          <button className="hidden md:inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-lg shadow hover:shadow-md transition">
+          <button className="hidden md:inline-block bg-[#c20000] text-white px-4 py-2 rounded-lg shadow hover:shadow-md transition">
             Get Started
           </button>
           <button
@@ -76,7 +76,7 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <button className="w-full mt-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 rounded-lg shadow hover:shadow-md transition">
+              <button className="w-full mt-3 bg-[#c20000] text-white py-2 rounded-lg shadow hover:shadow-md transition">
                 Get Started
               </button>
             </div>
