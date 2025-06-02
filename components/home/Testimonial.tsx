@@ -1,5 +1,19 @@
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { Poppins, Montserrat, Lato } from 'next/font/google';
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400', '700'],
+});
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+});
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
@@ -38,5 +52,22 @@ export function AnimatedTestimonialsDemo() {
       src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
-  return <AnimatedTestimonials testimonials={testimonials} />;
+  return <>
+  <div className="mt-20">
+
+  
+  <h3
+          className={`${lato.className} antialiased text-center text-lg md:text-xl my-4 text-[#07437D]`}
+        >
+         Discover how we've made a difference in their lives and businesses.
+        </h3>
+        <h2
+          className={`text-center text-xl md:text-3xl ${poppins.className} font-bold`}
+        >
+          Loved by  <span className="text-[#c20000]">Thousands</span>
+        </h2>
+      
+  <AnimatedTestimonials testimonials={testimonials} />
+  </div>
+  </>;
 }

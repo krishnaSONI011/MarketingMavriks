@@ -15,36 +15,36 @@ export const projects = [
     title: "High-Impact Branding",
     description:
       "Crafting unforgettable brand identities that resonate and convert.",
-    link: "#",
+    link: "/#",
   },
   {
     title: "Next-Gen Web Design",
     description:
       "Building fast, modern, and visually stunning websites that drive results.",
-    link: "#",
+    link: "/2#",
   },
   {
     title: "SEO & Growth Strategy",
     description:
       "Dominating search engines and turning traffic into loyal customers.",
-    link: "#",
+    link: "/3#",
   },
   {
     title: "Social Media Magic",
     description:
       "Creating viral content and engagement that builds lasting communities.",
-    link: "#",
+    link: "/4#",
   },
   {
     title: "E-commerce Excellence",
     description:
       "Scaling online stores with high-converting design and seamless UX.",
-    link: "#",
+    link: "/5#",
   },
   {
     title: "Creative Copywriting",
     description:
       "Words that sell, stories that stick — we bring voice to your vision.",
-    link: "#",
+    link: "/6#",
   },
 ];

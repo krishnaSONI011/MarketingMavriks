@@ -97,6 +97,12 @@ export default function HoverCards() {
           ))}
         </div>
       </div>
+      <div className='text-center'>
+        <button className="mt-5 px-4 py-2 rounded-md border border-[#c20000] bg-white text-[#c20000] text-xl font-semibold hover:shadow-[4px_4px_0px_0px_rgba(194,0,0)] transition duration-200 ">
+             Read More Story
+      </button>
+      </div>
+      
     </div>
   );
 }

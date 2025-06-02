@@ -4,7 +4,19 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 
 import { useEffect, useState } from "react";
-
+import { Poppins,Montserrat,Lato } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight:['400']
+})
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ['400']
+})
+const lato = Lato({
+  subsets: ["latin"],
+  weight:['400']
+})
 type Testimonial = {
   quote: string;
   name: string;
@@ -43,7 +55,7 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-7xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
@@ -112,10 +124,10 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className={`text-2xl font-bold text-black dark:text-white ${poppins.className} antialiased`}>
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className={`text-sm text-[#06437d] dark:text-neutral-500 ${montserrat.className} antialiased`}>
               {testimonials[active].designation}
             </p>
             <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">

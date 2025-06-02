@@ -7,7 +7,7 @@ const lato = Lato({ subsets: ["latin"], weight: ["400"] });
 
 export default function LastSection() {
   return (
-    <section className="bg-white py-20 px-6 md:px-20">
+    <section className="bg-white  px-6 md:px-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* Left Side - Content */}
