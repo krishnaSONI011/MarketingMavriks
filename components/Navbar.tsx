@@ -22,16 +22,24 @@ const poppins =Poppins({
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Why Choose Us",
-      link: "#features",
+      name: "ABOUT US",
+      link: "/about-us",
     },
     {
-      name: "Who We Are",
-      link: "#pricing",
+      name: "SERVICES",
+      link: "/services",
     },
     {
-      name: "What We Do",
-      link: "#contact",
+      name: "BLOGS",
+      link: "/blogs",
+    },
+    {
+      name: "PORTFOLIO",
+      link: "/#",
+    },
+    {
+      name: "CONTACT US",
+      link: "/contact",
     },
   ];
   
