@@ -6,7 +6,12 @@ const poppins = Poppins({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
-
+interface PageProps {
+    params: {
+      slug: string;
+    };
+  }
+  
 // 👇 Fetch blog post by slug using Axios
 async function getPostBySlug(slug: string) {
   try {
@@ -22,7 +27,7 @@ async function getPostBySlug(slug: string) {
   }
 }
 
-export default async function BlogPage({ params }: { params: { slug: string } }) {
+export default async function BlogPage({ params }: PageProps) {
   const post = await getPostBySlug(params.slug);
   if (!post) return notFound();
 
