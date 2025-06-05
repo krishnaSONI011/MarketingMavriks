@@ -22,6 +22,7 @@ interface BlogPost {
       source_url: string;
     }[];
   };
+  slug:string
 }
 
 export default function LatestBlogs() {
@@ -59,7 +60,7 @@ export default function LatestBlogs() {
     
         <div>
           {blogPosts.map((blog, index) => (
-            <SideMiniList key={index} title={blog.title.rendered} image={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? '/blog-post-2.jpg'}/>
+            <SideMiniList key={index} title={blog.title.rendered} image={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? '/blog-post-2.jpg'} slug={blog.slug}/>
           ))}
         </div>
      

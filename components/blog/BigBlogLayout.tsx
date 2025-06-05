@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { Lato } from 'next/font/google';
 import axios from 'axios';
 import Load from './load';
+import Link from 'next/link';
 
 
 
@@ -18,6 +19,7 @@ interface BlogPost {
   title: {
     rendered: string;
   };
+  slug:string;
   _embedded?: {
     'wp:featuredmedia'?: {
       source_url: string;
@@ -48,7 +50,9 @@ export default function BigBlogLayout() {
   const featuredImage = blogData._embedded?.['wp:featuredmedia']?.[0]?.source_url;
 
   return (
+    <Link href={`/blogs/${blogData.slug}`}>
     <div className="w-fit">
+      
       <div>
         <Image
           src={featuredImage || '/app-delivery.jpg'} // fallback image
@@ -68,6 +72,8 @@ export default function BigBlogLayout() {
         <span className="text-lg bg-[#c20000] text-white p-2 rounded">27 May, 25</span>
         <span className="text-lg bg-[#06437d] text-white p-2 rounded">6 Min Read</span>
       </div>
-    </div>
+     
+    </div> </Link>
+   
   );
 }

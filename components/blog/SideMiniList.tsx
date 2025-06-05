@@ -1,6 +1,7 @@
 'use client';
 import { Lato } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -10,11 +11,13 @@ const lato = Lato({
 interface blogdata {
   title: string;
   image: string;
+  slug:string;
 }
 
-export default function SideMiniList({ title, image }: blogdata) {
+export default function SideMiniList({ title, image,slug }: blogdata) {
   return (
     <div>
+      <Link href={`/blogs/${slug}`}>
       <div className="flex gap-2 mt-5">
         {/* Blog image */}
         <div>
@@ -30,6 +33,7 @@ export default function SideMiniList({ title, image }: blogdata) {
           </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 }
