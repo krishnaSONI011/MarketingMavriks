@@ -8,7 +8,7 @@ import { CardHoverEffectDemo } from '@/components/home/BoxLayout';
 import { Skeleton } from '@/components/Skeleton';
 import HoverCards from '@/components/ImageHoverComponent';
 import { BlogGrid } from '@/components/home/BlogGrid';
-import { AnimatedTestimonialsDemo } from '@/components/home/Testimonial';import type { Metadata } from 'next';
+import { AnimatedTestimonialsDemo } from '@/components/home/Testimonial';
 
 
 
