@@ -1,3 +1,4 @@
+'use client'
 import axios from 'axios';
 import { notFound } from 'next/navigation';
 import { Poppins } from 'next/font/google';
