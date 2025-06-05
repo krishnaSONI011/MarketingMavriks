@@ -11,13 +11,13 @@ const lato = Lato({
 interface blogdata {
   title: string;
   image: string;
-  slug:string;
+  sluge:string;
 }
 
-export default function SideMiniList({ title, image,slug }: blogdata) {
+export default function SideMiniList({ title, image,sluge }: blogdata) {
   return (
     <div>
-      <Link href={`/blogs/${slug}`}>
+      <Link href={`/blogs/${sluge}`}>
       <div className="flex gap-2 mt-5">
         {/* Blog image */}
         <div>
