@@ -19,12 +19,12 @@ interface BlogPost {
   title: {
     rendered: string;
   };
-  slug:string;
   _embedded?: {
     'wp:featuredmedia'?: {
       source_url: string;
     }[];
   };
+  slug:string
 }
 
 export default function BigBlogLayout() {
