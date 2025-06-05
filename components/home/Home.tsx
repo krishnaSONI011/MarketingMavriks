@@ -1,4 +1,4 @@
-'use client'
+
 import dynamic from 'next/dynamic';
 import { Lato } from "next/font/google";
 import SecondSection from "@/components/home/SecondSection";
@@ -9,8 +9,7 @@ import { Skeleton } from '@/components/Skeleton';
 import HoverCards from '@/components/ImageHoverComponent';
 import { BlogGrid } from '@/components/home/BlogGrid';
 import { AnimatedTestimonialsDemo } from '@/components/home/Testimonial';
-
-
+import { Metadata } from 'next';
 
 
 

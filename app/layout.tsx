@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title:{
-    default: "Marketing Mavricks",
+    default: "Social Media & Performance Marketing Experts | Marketing Mavricks",
     template:"%s | Marketing Mavricks"
   }
 };
@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <head>
+        <link rel="icon" href="/logo.png" />
+        {/* You can add more meta tags here */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth `}
       >
