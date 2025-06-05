@@ -1,25 +1,19 @@
 import axios from 'axios';
 import { notFound } from 'next/navigation';
 import { Poppins } from 'next/font/google';
-
-// ✅ Font setup
+import { useParams } from 'next/navigation';
 const poppins = Poppins({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
 
-// ✅ Page props type
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
 
-// ✅ Fetch blog post by slug
-async function getPostBySlug() {
+  
+// 👇 Fetch blog post by slug using Axios
+async function getPostBySlug(slug : string) {
   try {
     const res = await axios.get(
-      `https://marketingmavricks.com/wp-json/wp/v2/posts?slug=test&_embed`
+      `https://marketingmavricks.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
     );
     const data = res.data;
     if (!data || data.length === 0) return null;
@@ -30,9 +24,10 @@ async function getPostBySlug() {
   }
 }
 
-// ✅ Page component
 export default async function BlogPage() {
-  const post = await getPostBySlug();
+    const params = useParams();
+    const slug  = params?.slug as string;
+  const post = await getPostBySlug(slug);
   if (!post) return notFound();
 
   const { title, content } = post;
