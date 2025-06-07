@@ -8,8 +8,8 @@ export default function MarqueeImage(){
 
         
         <Marquee speed={200} autoFill >
-           <Image src="/dummy.png" alt="Marquee Image" className="" height={5000} width={5000}/>
-           <Image src="/dummy.png" alt="Marquee Image" className="" height={5000} width={5000}/>
+           <Image src="/scroll.png" alt="Marquee Image" className="" height={6000} width={6000}/>
+           <Image src="/scroll.png" alt="Marquee Image" className="" height={6000} width={6000}/>
 
         </Marquee>
         </div>
